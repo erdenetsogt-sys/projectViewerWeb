@@ -1,5 +1,13 @@
 import { gql } from "@apollo/client";
 
+const DELETE_PROJECT = gql`
+  mutation deleteProject($id: ID!) {
+    deleteProject(id: $id) {
+      id
+    }
+  }
+`;
+
 const ADD_PROJECT = gql`
   mutation addProject(
     $name: String!
@@ -27,4 +35,4 @@ const ADD_PROJECT = gql`
   }
 `;
 
-export { ADD_PROJECT };
+export { ADD_PROJECT, DELETE_PROJECT };
