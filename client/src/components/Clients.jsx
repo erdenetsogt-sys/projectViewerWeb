@@ -12,13 +12,13 @@ export default function Clients() {
     <>
       {!loading && !error && (
         <table className="table table-hover mt-3">
-          <trhead>
+          <thead>
             <tr>
               <th>Name</th>
               <th>Phone</th>
               <th>Email</th>
             </tr>
-          </trhead>
+          </thead>
           <tbody>
             {data.clients.map((client) => (
               <ClientRow key={client.id} client={client} />
